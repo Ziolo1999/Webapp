@@ -6,9 +6,9 @@ import scipy
 
 def make_decision(p_value, alpha):
     if p_value <= alpha:
-        decision = f"p-value is lower than {alpha}. Null hypothesis has been rejected!"
+        decision = f"P-value is lower than {alpha}. Null hypothesis has been rejected!"
     else:
-        decision = f"p-value is higher than {alpha}. There is not enough evidence to rejest the null hypothesis!"
+        decision = f"P-value is higher than {alpha}. There is not enough evidence to reject the null hypothesis!"
     return decision
 
 

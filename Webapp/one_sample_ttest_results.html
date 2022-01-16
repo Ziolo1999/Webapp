@@ -78,50 +78,39 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4" style="color:White;">One Sample t-Test</h1>
                         <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item active" style="color:White;">The One Sample t-Test examines whether the mean of a population is statistically different from a known or hypothesized value. The One Sample t-Test is a parametric test.</li>
                         </ol>
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Inputs</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Your results!</h3></div>
                                     <div class="card-body">
                                         <form action="/one_sample_ttest" method="post">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputHypothesizedMean" type="number" step="any"
-placeholder="HypothesizedMean" />
-                                                <label for="inputHypothesizedMean">Hypothesized Mean</label>
-                                            </div> 
-                                                <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputSampleMean" type="number" step="any"
-placeholder="SampleMean" />
-                                                <label for="inputSampleMean">Sample Mean</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputSampleStd" type="number" step="any"
-placeholder="Standard_Deviation" />
-                                                <label for="inputSampleStd">Sample Standard Deviation</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputSampleSize" type="number" step="any"
-placeholder="Sample_Size" />
-                                                <label for="inputSampleSize">Sample Size (number of observations)</label></div>
-                                           <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputAlpha" value="0.05" lang="en" type="number" step="0.01"  min="0" max="1"
-placeholder="Alpha_Level" />
-                                                <label for="inputAlpha">Alpha Level (default value = 0.05)</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0"></div>
-                                             <form action="/action_page.php">
-                                              <label for="tail">Choose a tail test type</label>
-                                              <select name="tail" id="tail">
-                                              <option value="left-sided">Left Tailed</option>
-                                              <option value="right-sided">Right Tailed</option>
-                                              <option value="two-sided">Two-Tailed</option>
-                                              </select>
-                                              <br><br>
-                                              </form>
-                                                <input class="btn btn-primary" name="submit" type="submit" value="Compute">
+                                              <table>
+                                              <tr>
+                                                <td>Test statistic:</td>
+                                                <td>{{result["test_stat"]}}</td>
+                                              </tr>
+                                               <tr>
+                                                <td>Alpha:</td>
+                                                <td>{{result["alpha"]}}</td>
+                                              </tr><tr>
+                                                <td>p-value:</td>
+                                                <td>{{result["p-value"]}}</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Degrees of Freedom:</td>
+                                                <td>{{result["degrees_of_freedom"]}}</td>
+                                              </tr>
+                                               <tr>
+                                                <td>Type:</td>
+                                                <td>{{result["type"]}}</td>
+                                              </tr>
+                                              </table>
+                                                <p><h4>Decision</h4></p>     
+                                                <tr>
+                                                    <p><h6><th>{{result["decision"]}}</th></h6></p>
+                                               </tr>    
                                             </div>
                                         </form>
                                     </div>
