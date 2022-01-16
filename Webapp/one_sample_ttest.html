@@ -112,6 +112,15 @@ placeholder="Alpha_Level" />
                                             </div>
                                             <div class="form-check mb-3">
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0"></div>
+                                             <form action="/action_page.php">
+                                              <label for="tail">Choose a tail test type</label>
+                                              <select name="tail" id="tail">
+                                              <option value="left">Left Tailed</option>
+                                              <option value="right">Right Tailed</option>
+                                              <option value="two-sided">Two-tiled</option>
+                                              </select>
+                                              <br><br>
+                                              </form>
                                                 <input class="btn btn-primary" type="submit" value="Compute">
                                             </div>
                                         </form>
