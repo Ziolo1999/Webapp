@@ -6,9 +6,9 @@ def make_decision(p_value, alpha):
     return decision
 
 
-def one_sample_t_test(pop_mean, variance, tested_mean, N, alpha=0.05, type="two-sided"):
+def one_sample_t_test(sample_mean, sample_std, hipothetical_mean, N, alpha=0.05, type="two-sided"):
     
-    test_stat = (pop_mean - tested_mean) * N ** (1/2) / variance ** (1/2)
+    test_stat = (sample_mean - hipothetical_mean) * N ** (1/2) / sample_std ** (1/2)
     dof = N - 1
     ub = 1.96
     lb = -1.96
