@@ -1,3 +1,9 @@
+import scipy.stats
+import numpy 
+import matplotlib.pyplot as plt
+import scipy
+
+
 def make_decision(p_value, alpha):
     if p_value <= alpha:
         decision = f"p-value is lower than {alpha}. Null hypothesis has been rejected!"
@@ -29,7 +35,7 @@ def one_sample_t_test(sample_mean, sample_std, hipothetical_mean, N, alpha=0.05,
 
     decision = make_decision(p_value, alpha)
 
-    return {"test_stat":test_stat, "p-value":p_value, "lb":lb, "ub":ub, "degrees_of_freedom":dof, "type":type, "decision":decision}
+    return {"test_stat":test_stat, "p-value":p_value, "lb":lb, "ub":ub, "degrees_of_freedom":dof, "type":type, "decision":decision, "alpha":alpha}
 
 
 def plot_t_student(df=1000, lb=None, ub=None, type="two-sided", stat_value=0):
