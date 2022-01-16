@@ -97,14 +97,19 @@ placeholder="SampleMean" />
                                                 <label for="inputSampleMean">Sample Mean</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputStd" type="number" step="any"
+                                                <input class="form-control" name="inputSampleStd" type="number" step="any"
 placeholder="Standard_Deviation" />
-                                                <label for="inputStd">Standard Deviation</label>
+                                                <label for="inputSampleStd">Sample Standard Deviation</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" name="inputSampleSize" type="number" step="any"
 placeholder="Sample_Size" />
                                                 <label for="inputSampleSize">Sample Size (number of observations)</label></div>
+                                           <div class="form-floating mb-3">
+                                                <input class="form-control" name="inputAlpha" type="number" step="any"  min="0" max="1"
+placeholder="Alpha_Level" />
+                                                <label for="inputAplha">Alpha Level (default value = 0.05)</label>
+                                            </div>
                                             <div class="form-check mb-3">
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0"></div>
                                                 <input class="btn btn-primary" type="submit" value="Compute">
