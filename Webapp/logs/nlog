@@ -12,3 +12,11 @@
 2022-01-16 11:21:36,638 INFO     admin GET http://localhost:8012/index 127.0.0.1
 2022-01-16 11:30:44,888 INFO     admin GET http://localhost:8012/index 127.0.0.1
 2022-01-16 11:45:54,569 INFO     admin GET http://localhost:8012/index 127.0.0.1
+2022-01-16 13:13:48,681 INFO     None GET http://localhost:8012/ 127.0.0.1
+2022-01-16 13:13:53,005 INFO     None GET http://localhost:8012/ 127.0.0.1
+2022-01-16 13:13:58,865 INFO     None GET http://localhost:8012/index 127.0.0.1
+2022-01-16 13:14:07,574 INFO     None GET http://localhost:8012/ 127.0.0.1
+2022-01-16 13:15:37,243 INFO     None GET http://localhost:8012/ 127.0.0.1
+2022-01-16 13:16:18,837 INFO     None GET http://localhost:8012/ 127.0.0.1
+2022-01-16 13:16:29,375 INFO     admin POST http://localhost:8012/login 127.0.0.1
+2022-01-16 13:16:29,408 INFO     admin GET http://localhost:8012/index 127.0.0.1
