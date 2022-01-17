@@ -63,3 +63,15 @@
 2022-01-16 20:43:36,358 INFO     False GET http://localhost:8022/login 127.0.0.1
 2022-01-16 20:43:40,414 INFO     kk@k POST http://localhost:8022/login 127.0.0.1
 2022-01-16 20:43:40,424 INFO     kk@k GET http://localhost:8022/index 127.0.0.1
+2022-01-17 15:11:03,252 INFO     None GET http://localhost:8022/ 127.0.0.1
+2022-01-17 15:11:03,515 INFO     False GET http://localhost:8022/login 127.0.0.1
+2022-01-17 15:11:11,794 INFO     admin POST http://localhost:8022/login 127.0.0.1
+2022-01-17 15:11:19,920 INFO     admin POST http://localhost:8022/login 127.0.0.1
+2022-01-17 15:11:53,091 INFO     admin POST http://localhost:8022/login 127.0.0.1
+2022-01-17 15:12:56,819 INFO     admin POST http://localhost:8022/login 127.0.0.1
+2022-01-17 15:12:57,083 INFO     admin GET http://localhost:8022/index 127.0.0.1
+2022-01-17 15:13:56,409 INFO     False GET http://localhost:8022/login 127.0.0.1
+2022-01-17 15:13:57,617 INFO     admin POST http://localhost:8022/login 127.0.0.1
+2022-01-17 15:13:57,930 INFO     admin GET http://localhost:8022/index 127.0.0.1
+2022-01-17 15:14:06,705 INFO     admin GET http://localhost:8022/index 127.0.0.1
+2022-01-17 15:14:09,707 INFO     admin GET http://localhost:8022/index 127.0.0.1

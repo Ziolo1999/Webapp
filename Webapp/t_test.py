@@ -58,4 +58,4 @@ def plot_t_student(df=1000, lb=None, ub=None, type="two-sided", stat_value=0):
         plt.fill_between(px_upper, scipy.stats.t.pdf(px_upper, df), color="red")
 
     plt.axvline(x=stat_value, color="green")
-
+    plt.savefig('Webapp/Webapp/static/ttest_plot.png')

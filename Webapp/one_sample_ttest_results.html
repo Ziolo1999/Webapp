@@ -88,28 +88,29 @@
                                             <div class="form-floating mb-3">
                                               <table>
                                               <tr>
-                                                <td>Test statistic:</td>
+                                                <th>Test statistic:</th>
                                                 <td>{{result["test_stat"]}}</td>
                                               </tr>
                                                <tr>
-                                                <td>Alpha:</td>
+                                                <th>Alpha:</th>
                                                 <td>{{result["alpha"]}}</td>
                                               </tr><tr>
-                                                <td>p-value:</td>
+                                                <th>p-value:</th>
                                                 <td>{{result["p-value"]}}</td>
                                               </tr>
                                               <tr>
-                                                <td>Degrees of Freedom:</td>
+                                                <th>Degrees of Freedom:</th>
                                                 <td>{{result["degrees_of_freedom"]}}</td>
                                               </tr>
                                                <tr>
-                                                <td>Type:</td>
+                                                <th>Type:</th>
                                                 <td>{{result["type"]}}</td>
                                               </tr>
                                               </table>
                                                 <p><h4>Decision</h4></p>     
                                                 <tr>
                                                     <p><h6><th>{{result["decision"]}}</th></h6></p>
+                                        <img src='/static/ttest_plot.png' alt="Ttest">
                                                </tr>    
                                             </div>
                                         </form>
