@@ -12,9 +12,9 @@ def make_decision(p_value, alpha):
     return decision
 
 
-def one_sample_t_test(sample_mean, sample_std, hipothetical_mean, N, alpha=0.05, type="two-sided"):
+def paired_ttest(sample_diff_mean, sample_diff_std, hipothetical_diff_mean, N, alpha=0.05, type="two-sided"):
     
-    test_stat = (sample_mean - hipothetical_mean) * N ** (1/2) / sample_std
+    test_stat = (sample_diff_mean - hipothetical_diff_mean) * N ** (1/2) / sample_diff_std
     dof = N - 1
     ub = 1.96
     lb = -1.96
