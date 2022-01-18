@@ -205,3 +205,5 @@
 2022-01-18 22:49:08,101 INFO     admin POST http://localhost:8022/login 127.0.0.1
 2022-01-18 22:49:08,110 INFO     admin GET http://localhost:8022/index 127.0.0.1
 2022-01-18 22:50:04,431 INFO     False GET http://localhost:8022/login 127.0.0.1
+2022-01-18 23:00:27,770 INFO     admin GET http://localhost:8021/ 127.0.0.1
+2022-01-18 23:00:27,770 INFO     admin GET http://localhost:8021/ 127.0.0.1
