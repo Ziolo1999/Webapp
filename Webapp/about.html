@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Statistical Calculator - Results</title>
+        <title>Statistical Calculator - About</title>
         <link href="static/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
-    <style>
-        body {
+     <style>
+body {
   background-image: url('/static/img1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
@@ -19,7 +19,27 @@
   background-position: center;
   backdrop-filter: blur(4px);
 }
-    </style>   
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.55); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+         
+p.big {
+  line-height: 10.0;
+}
+    </style>
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
@@ -47,7 +67,8 @@
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
-                       <div class="sb-sidenav-menu-heading">Statistical Tests</div>
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Statistical Tests</div>
                             <a class="nav-link" href="one_sample_ttest">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 One Sample t-Test
@@ -62,54 +83,29 @@
                             </a>
                         </div>
                     </div>
+                    <div>
+                    </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4" style="color:White;">Paired Sample t-Test</h1>
-                        <ol class="breadcrumb mb-4">
-                        </ol>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-5">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Your results!</h3></div>
-                                    <div class="card-body">
-                                        <form action="/paired_sample_ttest" method="post">
-                                            <div class="form-floating mb-3">
-                                               <h6> Null hypothesis:</h6> <p><p style="text-indent: 3em;">The differences between pairs is zero.</p>
-                                                <h6> Alternative hypothesis:</h6> <p><p style="text-indent: 3em;">The differences between pairs is <i>not</i> zero.</p>
-                                                <table>
-                                              <tr>
-                                                <th>Test statistic:</th>
-                                                <td>{{result["test_stat"]}}</td>
-                                              </tr>
-                                               <tr>
-                                                <th>Alpha:</th>
-                                                <td>{{result["alpha"]}}</td>
-                                              </tr><tr>
-                                                <th>p-value:</th>
-                                                <td>{{result["p-value"]}}</td>
-                                              </tr>
-                                              <tr>
-                                                <th>Degrees of Freedom:</th>
-                                                <td>{{result["degrees_of_freedom"]}}</td>
-                                              </tr>
-                                               <tr>
-                                                <th>Type:</th>
-                                                <td>{{result["type"]}}</td>
-                                              </tr>
-                                              </table>
-                                                <p><h4>Decision</h4></p>     
-                                                <tr>
-                                                    <p><h6><th>{{result["decision"]}}</th></h6></p>
-                                               </tr>    
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                        <div class="bg-image"></div>
+                        <center>
+                            <div class="bg-text">
+                                <p class="big">
+                                    <p><h1 class="mt-4"style="color:White;">About the site</h1></p>
+                                        <h4 style="color:White; font-size:20px">
+                                        <p><br>Statistical Calculator platform was developed by students for the Python & SQL course. The outcome of our work is the interactive platform which provides the possibility to calculate three different types of t-Test statistics. Users are requested to register into the Statistical Calculator platform via special registration form, which was developed by us.</br></p>
+                        <p> This simple however powerful platform was developed with a high level of precision, therefore we, the Statistical Calculator inventors, are pleased to welcome you on our platform!</p>
+                                        
+                                        <p><br>Take your time and enjoy the calculations!<br></h4></p>
                             </div>
-                        </div>
+                        </center>
+                    
+                        <ol class="breadcrumb mb-4">
+                            
+                        </ol>
                     </div>
                 </main>
             </div>

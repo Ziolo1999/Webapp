@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Register - SB Admin</title>
+        <title>Statistical Calculator - Register</title>
         <link href="static/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -34,35 +34,27 @@ body {
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" name="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <input class="form-control" name="inputFirstName" type="text" placeholder="Enter your first name" required="required"/>
                                                         <label for="inputFirstName">First name</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                        <input class="form-control" name="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <input class="form-control" name="inputLastName" type="text" placeholder="Enter your last name" required="required"/>
                                                         <label for="inputLastName">Last name</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputEmail" type="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Email address (your future login)</label>
+                                                <input class="form-control" name="inputEmail" type="email" placeholder="name@example.com" required="required"/>
+                                                <label for="inputEmail">Email address</label>
                                             </div>
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
+                                            <div class="form-floating mb-3">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" name="inputPassword" type="password" placeholder="Create a password" />
+                                                        <input class="form-control" name="inputPassword" type="password" placeholder="Create a password" required="required"/>
                                                         <label for="inputPassword">Password</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" name="inputPasswordConfirm" type="password" placeholder="Confirm password" />
-                                                        <label for="inputPasswordConfirm">Confirm the password</label>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="mt-4 mb-0">
                                                 <input class="btn btn-primary" type="submit" value="Create Account">
                                             </div>

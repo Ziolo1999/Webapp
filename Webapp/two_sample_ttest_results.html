@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Static Navigation - SB Admin</title>
+        <title>Statistical Calculator - Results</title>
         <link href="static/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -78,7 +78,9 @@
                                     <div class="card-body">
                                         <form action="/one_sample_ttest" method="post">
                                             <div class="form-floating mb-3">
-                                              <table>
+                                               <h6> Null hypothesis:</h6> <p><p style="text-indent: 3em;">The first sample mean is equal to the mean of the second sample.</p>
+                                                <h6> Alternative hypothesis:</h6> <p><p style="text-indent: 3em;">The first sample mean is <i>not</i> equal to the mean of the second sample.</p>
+                                                <table>
                                               <tr>
                                                 <th>Test statistic:</th>
                                                 <td>{{result["test_stat"]}}</td>
@@ -102,7 +104,6 @@
                                                 <p><h4>Decision</h4></p>     
                                                 <tr>
                                                     <p><h6><th>{{result["decision"]}}</th></h6></p>
-                                        <img src="/static/ttestimg.img" alt="Ttest">
                                                </tr>    
                                             </div>
                                         </form>

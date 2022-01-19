@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Static Navigation - SB Admin</title>
+        <title>Paired t-Test</title>
         <link href="static/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -72,33 +72,32 @@
                     <li class="breadcrumb-item active" style="color:White;">The paired t-test is a method used to test whether the mean difference between pairs of measurements is equal to hypothesized mean of differences.</li>
                         </ol>
                         <div class="row justify-content-center">
-                            <div class="col-lg-5">
+                            <div class="col-lg-6">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Inputs</h3></div>
                                     <div class="card-body">
                                         <form action="/one_sample_ttest" method="post">
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" name="inputHypothesizedMean" type="number" step="any"
-placeholder="HypothesizedMean" />
+placeholder="HypothesizedMean" required="required"/>
                                                 <label for="inputHypothesizedMean">Hypothesized Mean of the Differences</label>
                                             </div> 
                                                 <div class="form-floating mb-3">
                                                 <input class="form-control" name="inputSampleMean" type="number" step="any"
-placeholder="SampleMean" />
+placeholder="SampleMean" required="required"/>
                                                 <label for="inputSampleMean">Sample Mean of the Differences</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" name="inputSampleStd" type="number" step="any"
-placeholder="Standard_Deviation" />
+placeholder="Standard_Deviation" required="required" min="0.001"/>
                                                 <label for="inputSampleStd">Sample Standard Deviation of the Differences</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" name="inputSampleSize" type="number" step="any"
-placeholder="Sample_Size" />
+placeholder="Sample_Size" required="required" min="1"/>
                                                 <label for="inputSampleSize">Sample Size (number of pairs)</label></div>
                                            <div class="form-floating mb-3">
-                                                <input class="form-control" name="inputAlpha" value="0.05" lang="en" type="number" step="0.01"  min="0" max="1"
-placeholder="Alpha_Level" />
+                                                <input class="form-control" name="inputAlpha" value="0.05" lang="en" type="number" step="0.001"  min="0.001" max="1" placeholder="Alpha_Level" required="required"/>
                                                 <label for="inputAlpha">Alpha Level (default value = 0.05)</label>
                                             </div>
                                             <div class="form-check mb-3">

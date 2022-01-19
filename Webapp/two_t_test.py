@@ -15,7 +15,7 @@ def make_decision(p_value, alpha):
 def two_sample_t_test(first_sample_mean, first_sample_std, second_sample_mean, second_sample_std, hipothetical_mean, first_N, second_N, test_type, alpha=0.05, type="two-sided"):
   
     test_stat = (first_sample_mean - first_sample_mean) / ((first_sample_std**2/first_N) + (second_sample_std**2/second_N ))** (1/2)
-    dof = first_N + second_N -2
+    dof = first_N + second_N - 2
     ub = 1.96
     lb = -1.96
 
