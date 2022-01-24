@@ -47,7 +47,8 @@
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
-                       <div class="sb-sidenav-menu-heading">Statistical Tests</div>
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Statistical Tests</div>
                             <a class="nav-link" href="one_sample_ttest">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 One Sample t-Test
@@ -58,7 +59,7 @@
                             </a>
                             <a class="nav-link" href="paired_ttest">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Paired t-Test
+                                Paired Sample t-Test
                             </a>
                         </div>
                     </div>
@@ -75,10 +76,10 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Your results!</h3></div>
                                     <div class="card-body">
-                                        <form action="/paired_sample_ttest" method="post">
+                                        <form action="/paired_ttest" method="post">
                                             <div class="form-floating mb-3">
-                                               <h6> Null hypothesis:</h6> <p><p style="text-indent: 3em;">The differences between pairs is zero.</p>
-                                                <h6> Alternative hypothesis:</h6> <p><p style="text-indent: 3em;">The differences between pairs is <i>not</i> zero.</p>
+                                                <h6> Null hypothesis:</h6> <p><p style="text-indent: 3em;">The sample mean is equal to the hypothesized mean.</p>
+                                                <h6> Alternative hypothesis:</h6> <p><p style="text-indent: 3em;">The sample mean is <i>not</i> equal to the hypothesized mean.</p>
                                                 <table>
                                               <tr>
                                                 <th>Test statistic:</th>

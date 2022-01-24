@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Paired t-Test</title>
+        <title>Paired Sample t-Test</title>
         <link href="static/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -58,7 +58,7 @@
                             </a>
                             <a class="nav-link" href="paired_ttest">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Paired t-Test
+                                Paired Sample t-Test
                             </a>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4" style="color:White;">Paired t-Test</h1>
+                        <h1 class="mt-4" style="color:White;">Paired Sample t-Test</h1>
                         <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active" style="color:White;">The paired t-test is a method used to test whether the mean difference between pairs of measurements is equal to hypothesized mean of differences.</li>
                         </ol>
@@ -76,7 +76,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Inputs</h3></div>
                                     <div class="card-body">
-                                        <form action="/one_sample_ttest" method="post">
+                                        <form action="/paired_ttest" method="post">
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" name="inputHypothesizedMean" type="number" step="any"
 placeholder="HypothesizedMean" required="required"/>
