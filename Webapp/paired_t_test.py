@@ -15,7 +15,7 @@ def make_decision(p_value, alpha):
 def paired_ttest(sample_diff_mean, sample_diff_std, hipothetical_diff_mean, N, alpha=0.05, type="two-sided"):
     
     test_stat = round((sample_diff_mean - hipothetical_diff_mean) * N ** (1/2) / sample_diff_std,2)
-    dof = N - 1
+    dof = round(N - 1,0)
     ub = 1.96
     lb = -1.96
 
@@ -27,11 +27,11 @@ def paired_ttest(sample_diff_mean, sample_diff_std, hipothetical_diff_mean, N, a
         
     elif type == "left-sided":
         lb = scipy.stats.t.ppf(alpha, dof)
-        p_value = round(scipy.stats.t.cdf(abs(test_stat), dof),3)
+        p_value = round(scipy.stats.t.cdf(test_stat, dof),3)
 
     elif type == "right-sided":
         ub = - scipy.stats.t.ppf(alpha, dof)
-        p_value = round(1 - scipy.stats.t.cdf(abs(test_stat), dof),3)
+        p_value = round(1 - scipy.stats.t.cdf(test_stat, dof),3)
 
     decision = make_decision(p_value, alpha)
 

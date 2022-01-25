@@ -15,7 +15,7 @@ def make_decision(p_value, alpha):
 def one_sample_t_test(sample_mean, sample_std, hipothetical_mean, N, alpha=0.05, type="two-sided"):
     
     test_stat = round((sample_mean - hipothetical_mean) * N ** (1/2) / sample_std,2)
-    dof = N - 1
+    dof = round(N - 1,0)
     ub = 1.96
     lb = -1.96
 
@@ -27,11 +27,11 @@ def one_sample_t_test(sample_mean, sample_std, hipothetical_mean, N, alpha=0.05,
         
     elif type == "left-sided":
         lb = scipy.stats.t.ppf(alpha, dof)
-        p_value = round(scipy.stats.t.pdf(abs(test_stat), dof),3)
+        p_value = round(scipy.stats.t.cdf(test_stat, dof),3)
 
     elif type == "right-sided":
         ub = - scipy.stats.t.ppf(alpha, dof)
-        p_value = round(1 - scipy.stats.t.pdf(abs(test_stat), dof),3)
+        p_value = round(1 - scipy.stats.t.cdf(test_stat, dof),3)
 
     decision = make_decision(p_value, alpha)
 

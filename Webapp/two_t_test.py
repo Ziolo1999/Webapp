@@ -12,10 +12,10 @@ def make_decision(p_value, alpha):
     return decision
 
 
-def two_sample_t_test(first_sample_mean, first_sample_std, second_sample_mean, second_sample_std, hipothetical_mean, first_N, second_N, test_type, alpha=0.05, type="two-sided"):
+def two_sample_t_test(first_sample_mean, first_sample_std, second_sample_mean, second_sample_std, first_N, second_N, alpha=0.05, type="two-sided"):
   
-    test_stat = round((first_sample_mean - first_sample_mean) / ((first_sample_std**2/first_N) + (second_sample_std**2/second_N ))** (1/2),2)
-    dof = first_N + second_N - 2
+    test_stat = round((first_sample_mean - second_sample_mean) / ((first_sample_std**2/first_N) + (second_sample_std**2/second_N ))**(1/2),2)
+    dof = round(first_N + second_N - 2,0)
     ub = 1.96
     lb = -1.96
 
@@ -27,11 +27,11 @@ def two_sample_t_test(first_sample_mean, first_sample_std, second_sample_mean, s
         
     elif type == "left-sided":
         lb = scipy.stats.t.ppf(alpha, dof)
-        p_value = round(1 - scipy.stats.t.cdf(abs(test_stat), dof),3)
+        p_value = round(scipy.stats.t.cdf(test_stat, dof),3)
 
     elif type == "right-sided":
         ub = - scipy.stats.t.ppf(alpha, dof)
-        p_value = round(1 - scipy.stats.t.cdf(abs(test_stat), dof),3)
+        p_value = round(1 - scipy.stats.t.cdf(test_stat, dof),3)
 
     decision = make_decision(p_value, alpha)
 
